@@ -18,7 +18,8 @@ public class Arreglos {
         System.out.println("Ingrese nombre y nota de cada estudiante del grupo: ");
         for (int i = 0; i < notas.length; i++) {
             System.out.print("Estudiante[" + (i+1) + "] = ");
-            nombresEstudiantes[i] = lector.nextLine();
+            nombresEstudiantes[i] = lector.next();
+            
             System.out.print("Nota[" + (i+1) + "] = ");
             notas[i] = lector.nextInt();
             sumaNotas += notas[i];
@@ -27,5 +28,6 @@ public class Arreglos {
             System.out.println(nombresEstudiantes[i] + " " + notas[i]);
         }        
         System.out.println("El promedio de las notas es " + (double)sumaNotas/cantidadNotas);
+        lector.close();
     }    
 }
